@@ -2,7 +2,7 @@
     'use strict';
 
     /**
-     * usage: <textarea ng-model="content" redactor></textarea>
+     * 用法: <textarea ng-model="content" redactor></textarea>
      *
      *    additional options:
      *      redactor: hash (pass in a redactor options hash)

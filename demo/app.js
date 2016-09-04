@@ -15,7 +15,7 @@ angular.module('app')
       };
 
       $scope.changeContent = function () {
-        $scope.content = "<h1>Some bogus content</h1>"
+        $scope.content = "<h1>angular </h1>"
       }
-      $scope.content = "<p>This is my awesome content</p>";
+      $scope.content = "<p>这是我真棒内容</p>";
     }]);
