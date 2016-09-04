@@ -4,7 +4,7 @@
     /**
      * 用法: <textarea ng-model="content" redactor></textarea>
      *
-     *    additional options:
+     *   其他选项:
      *      redactor: hash (pass in a redactor options hash)
      *
      */
@@ -19,11 +19,11 @@
                 require: 'ngModel',
                 link: function(scope, element, attrs, ngModel) {
 
-                    // Expose scope var with loaded state of Redactor
+                    // 随着减速机加载状态下VaR暴露范围
                     scope.redactorLoaded = false;
 
                     var updateModel = function updateModel(value) {
-                            // $timeout to avoid $digest collision
+                            // $timeout 避免 $digest 碰撞
                             $timeout(function() {
                                 scope.$apply(function() {
                                     ngModel.$setViewValue(value);
@@ -41,8 +41,8 @@
 
                     angular.extend(options, redactorOptions, additionalOptions);
 
-                    // put in timeout to avoid $digest collision.  call render()
-                    // to set the initial value.
+                 //投入超时，避免$消化碰撞。调用render（）
+                    //设置初始值。
                     $timeout(function() {
                         editor = element.redactor(options);
                         ngModel.$render();
