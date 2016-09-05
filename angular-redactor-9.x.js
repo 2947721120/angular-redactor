@@ -19,7 +19,7 @@
                 require: 'ngModel',
                 link: function(scope, element, attrs, ngModel) {
 
-                    // Expose scope var with loaded state of Redactor
+                    //暴露范围与VAR的主编负载状态
                     scope.redactorLoaded = false;
 
                     var updateModel = function updateModel(value) {
@@ -39,7 +39,7 @@
 
                     angular.extend(options, redactorOptions, additionalOptions);
 
-                    // prevent collision with the constant values on ChangeCallback
+                    // 防止碰撞与更改回调的常数值
                     if(!angular.isUndefined(redactorOptions.changeCallback)) {
                         options.changeCallback = function() {
                             updateModel.call(this);
@@ -47,8 +47,8 @@
                         }
                     }
 
-                    // put in timeout to avoid $digest collision.  call render() to
-                    // set the initial value.
+                   //投入超时，避免$消化碰撞。调用render（）来
+                     //设置的初始值。
                     $timeout(function() {
                         editor = element.redactor(options);
                         ngModel.$render();
